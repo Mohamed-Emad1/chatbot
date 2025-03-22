@@ -1,0 +1,55 @@
+# Flutter/Dart/Pub related
+.dart_tool/
+.packages
+.pub-cache/
+build/
+android/app/debug.keystore
+
+# Generated plugin registrant (sometimes generated in iOS or macOS builds)
+Generated.xcconfig
+GeneratedPluginRegistrant.*
+*.generated.*.dart
+
+# If you have test coverage generated, ignore that folder
+coverage/
+
+# iOS/Android/Windows/macOS build artifacts
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/ServiceDefinitions.json
+ios/Pods/
+ios/Runner.xcworkspace/
+android/.gradle/
+android/app/*.keystore
+windows/Flutter/ephemeral/
+macos/Flutter/ephemeral/
+
+# Swift Package Manager
+.swiftpm/
+.build/
+
+# Xcode
+*.xcworkspace
+*.xcuserdata
+*.xcuserstate
+DerivedData
+
+# VSCode
+.vscode/
+
+# IntelliJ / Android Studio
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Misc
+*.DS_Store
+*.log
+*.lock
+
+# Prevent committing environment variable files or private secrets
+.env
+.env.*
+secrets.*
+lib/core/secrets
