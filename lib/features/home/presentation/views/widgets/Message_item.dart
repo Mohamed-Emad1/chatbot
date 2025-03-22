@@ -13,13 +13,13 @@ class MessageItem extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: AppColors.tertiaryColor,
+        color: message.isUser ? AppColors.userColor : AppColors.tertiaryColor,
         borderRadius: BorderRadius.circular(12),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          SelectableText(
             message.message,
             style: const TextStyle(
                 color: Colors.white, fontWeight: FontWeight.bold),

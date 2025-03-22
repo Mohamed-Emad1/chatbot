@@ -1,3 +1,4 @@
+import 'package:chatbot/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextForm extends StatelessWidget {
@@ -28,6 +29,7 @@ class CustomTextForm extends StatelessWidget {
           onPressed: sendMessgae,
           icon: const Icon(
             Icons.send,
+            color: AppColors.lightWhite,
           ),
         ),
       ],
