@@ -22,7 +22,7 @@ class SignInViewBodyBlocConsumer extends StatelessWidget {
           buildSucessSnackBar(context, S.of(context).sign_in_successfully);
           GoRouter.of(context).pushReplacement(AppRouter.kHomeView);
         } else if (state is SignInFailure) {
-          buildErrorBar(context, S.of(context).sign_in_fail);
+          buildErrorBar(context, state.errMessage);
         }
       },
       builder: (context, state) {
