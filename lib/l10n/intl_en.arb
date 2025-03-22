@@ -19,5 +19,12 @@
     "invalid_email": "Invalid email",
     "invalid_password": "Invalid password",
     "invalid_email_or_password": "Invalid email or password",
-    "weak_password": "Weak password"
+    "weak_password": "Weak password",
+    "sign_in_successfully": "Sign in successfully",
+    "sign_up_successfully": "Sign up successfully",
+    "sign_out_successfully": "Sign out successfully",
+    "update_user_successfully": "Update user successfully",
+    "sign_in_fail": "Sign in fail",
+    "sign_up_fail": "Sign up fail",
+    "sign_in_after_sign_up": "please, Sign in after sign up to continue"
 }

@@ -1,10 +1,12 @@
 import 'package:chatbot/core/utils/app_images.dart';
 import 'package:chatbot/core/widgets/custom_button.dart';
 import 'package:chatbot/core/widgets/custom_text_form_field.dart';
+import 'package:chatbot/features/auth/presentation/manager/signin_cubit/signin_cubit.dart';
 import 'package:chatbot/features/auth/presentation/views/widgets/dont_have_account_widget.dart';
 import 'package:chatbot/features/auth/presentation/views/widgets/social_login_button.dart';
 import 'package:chatbot/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SignInViewBody extends StatefulWidget {
   const SignInViewBody({super.key});
@@ -16,7 +18,10 @@ class SignInViewBody extends StatefulWidget {
 class _SignInViewBodyState extends State<SignInViewBody> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
-  final AutovalidateMode _autovalidateMode = AutovalidateMode.disabled;
+  AutovalidateMode _autovalidateMode = AutovalidateMode.disabled;
+
+  late String email;
+  late String password;
 
   @override
   Widget build(BuildContext context) {
@@ -28,17 +33,38 @@ class _SignInViewBodyState extends State<SignInViewBody> {
           SliverToBoxAdapter(
             child: Column(
               children: [
-                CustomTextFormField(hintText: S.of(context).email),
+                CustomTextFormField(
+                  onSaved: (value) {
+                    email = value!;
+                  },
+                  hintText: S.of(context).email,
+                ),
                 const SizedBox(
                   height: 16,
                 ),
-                CustomTextFormField(hintText: S.of(context).password),
+                CustomTextFormField(
+                  onSaved: (value) {
+                    password = value!;
+                  },
+                  hintText: S.of(context).password,
+                ),
                 const SizedBox(
                   height: 32,
                 ),
                 CustomButton(
                   text: S.of(context).sign_in,
-                  onPressed: () {},
+                  onPressed: () {
+                    if (_formKey.currentState!.validate()) {
+                      _formKey.currentState!.save();
+
+                      BlocProvider.of<SignInCubit>(context)
+                          .signInWithEmailAndPassword(email, password);
+                    } else {
+                      setState(() {
+                        _autovalidateMode = AutovalidateMode.always;
+                      });
+                    }
+                  },
                 ),
                 const SizedBox(
                   height: 16,
@@ -61,7 +87,9 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                   height: 12,
                 ),
                 SocialLoginButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    BlocProvider.of<SignInCubit>(context).signInWithGoogle();
+                  },
                   text: S.of(context).sign_in_with_google,
                   image: Assets.imagesGoogleIcon,
                 ),
@@ -69,7 +97,9 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                   height: 12,
                 ),
                 SocialLoginButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    BlocProvider.of<SignInCubit>(context).signInWithFacebook();
+                  },
                   text: S.of(context).sign_in_with_facebook,
                   image: Assets.imagesFacebookIcon,
                 ),

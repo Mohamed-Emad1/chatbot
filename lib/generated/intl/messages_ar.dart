@@ -48,12 +48,26 @@ class MessageLookup extends MessageLookupByLibrary {
         "password_must_be": MessageLookupByLibrary.simpleMessage(
             "كلمة المرور يجب أن تكون على الأقل 6 حروف"),
         "sign_in": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "sign_in_after_sign_up": MessageLookupByLibrary.simpleMessage(
+            " يرجى القيام بتسجيل الدخول بعد انشاء الحساب للمتابعة"),
+        "sign_in_fail":
+            MessageLookupByLibrary.simpleMessage("فشل تسجيل الدخول"),
+        "sign_in_successfully":
+            MessageLookupByLibrary.simpleMessage("تم تسجيل الدخول بنجاح"),
         "sign_in_with_facebook":
             MessageLookupByLibrary.simpleMessage("تسجيل دخول باستخدام فيسبوك"),
         "sign_in_with_google":
             MessageLookupByLibrary.simpleMessage("تسجيل دخول باستخدام جوجل"),
         "sign_out": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
+        "sign_out_successfully":
+            MessageLookupByLibrary.simpleMessage("تم تسجيل الخروج بنجاح"),
+        "sign_up_fail":
+            MessageLookupByLibrary.simpleMessage("فشل انشاء الحساب"),
+        "sign_up_successfully":
+            MessageLookupByLibrary.simpleMessage("تم انشاء الحساب بنجاح"),
         "signup": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
+        "update_user_successfully":
+            MessageLookupByLibrary.simpleMessage("تم تحديث الحساب بنجاح"),
         "weak_password":
             MessageLookupByLibrary.simpleMessage("كلمة المرور ضعيفة")
       };

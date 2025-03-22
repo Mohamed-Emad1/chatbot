@@ -1,5 +1,6 @@
 import 'package:chatbot/core/routing/app_router.dart';
 import 'package:chatbot/core/services/bloc_observer.dart';
+import 'package:chatbot/core/services/service_locator.dart';
 import 'package:chatbot/core/services/shared_prefrences_singletone.dart';
 import 'package:chatbot/core/utils/app_colors.dart';
 import 'package:chatbot/firebase_options.dart';
@@ -16,6 +17,7 @@ void main() async {
   );
   await SharedPreferencesSingleton.init();
   Bloc.observer = SimpleBlocObserver();
+  setupServiceLocator();
   runApp(const ChatBotApp());
 }
 

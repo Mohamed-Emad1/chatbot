@@ -259,6 +259,76 @@ class S {
       args: [],
     );
   }
+
+  /// `Sign in successfully`
+  String get sign_in_successfully {
+    return Intl.message(
+      'Sign in successfully',
+      name: 'sign_in_successfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign up successfully`
+  String get sign_up_successfully {
+    return Intl.message(
+      'Sign up successfully',
+      name: 'sign_up_successfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign out successfully`
+  String get sign_out_successfully {
+    return Intl.message(
+      'Sign out successfully',
+      name: 'sign_out_successfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Update user successfully`
+  String get update_user_successfully {
+    return Intl.message(
+      'Update user successfully',
+      name: 'update_user_successfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign in fail`
+  String get sign_in_fail {
+    return Intl.message(
+      'Sign in fail',
+      name: 'sign_in_fail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign up fail`
+  String get sign_up_fail {
+    return Intl.message(
+      'Sign up fail',
+      name: 'sign_up_fail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `please, Sign in after sign up to continue`
+  String get sign_in_after_sign_up {
+    return Intl.message(
+      'please, Sign in after sign up to continue',
+      name: 'sign_in_after_sign_up',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -19,6 +19,13 @@
     "invalid_email": "البريد الإلكتروني غير صالح",
     "invalid_password": "كلمة المرور غير صالحة",
     "invalid_email_or_password": "البريد الإلكتروني أو كلمة المرور غير صالحة",
-    "weak_password": "كلمة المرور ضعيفة"
+    "weak_password": "كلمة المرور ضعيفة",
+    "sign_in_successfully": "تم تسجيل الدخول بنجاح",
+    "sign_up_successfully": "تم انشاء الحساب بنجاح",
+    "sign_out_successfully": "تم تسجيل الخروج بنجاح",
+    "update_user_successfully": "تم تحديث الحساب بنجاح",
+    "sign_in_fail": "فشل تسجيل الدخول",
+    "sign_up_fail": "فشل انشاء الحساب",
+    "sign_in_after_sign_up": " يرجى القيام بتسجيل الدخول بعد انشاء الحساب للمتابعة"
     
 }

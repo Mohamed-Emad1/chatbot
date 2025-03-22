@@ -48,12 +48,24 @@ class MessageLookup extends MessageLookupByLibrary {
         "password_must_be": MessageLookupByLibrary.simpleMessage(
             "Password must be at least 6 characters"),
         "sign_in": MessageLookupByLibrary.simpleMessage("Sign in"),
+        "sign_in_after_sign_up": MessageLookupByLibrary.simpleMessage(
+            "please, Sign in after sign up to continue"),
+        "sign_in_fail": MessageLookupByLibrary.simpleMessage("Sign in fail"),
+        "sign_in_successfully":
+            MessageLookupByLibrary.simpleMessage("Sign in successfully"),
         "sign_in_with_facebook":
             MessageLookupByLibrary.simpleMessage("Sign in with Facebook"),
         "sign_in_with_google":
             MessageLookupByLibrary.simpleMessage("Sign in with Google"),
         "sign_out": MessageLookupByLibrary.simpleMessage("Sign out"),
+        "sign_out_successfully":
+            MessageLookupByLibrary.simpleMessage("Sign out successfully"),
+        "sign_up_fail": MessageLookupByLibrary.simpleMessage("Sign up fail"),
+        "sign_up_successfully":
+            MessageLookupByLibrary.simpleMessage("Sign up successfully"),
         "signup": MessageLookupByLibrary.simpleMessage("Sign up"),
+        "update_user_successfully":
+            MessageLookupByLibrary.simpleMessage("Update user successfully"),
         "weak_password": MessageLookupByLibrary.simpleMessage("Weak password")
       };
 }

@@ -1,7 +1,12 @@
+import 'package:chatbot/core/services/service_locator.dart';
+import 'package:chatbot/features/auth/domain/repos/auth_repo.dart';
+import 'package:chatbot/features/auth/presentation/manager/signin_cubit/signin_cubit.dart';
+import 'package:chatbot/features/auth/presentation/manager/signup_cubit/cubit/signup_cubit.dart';
 import 'package:chatbot/features/auth/presentation/views/sign_in_view.dart';
 import 'package:chatbot/features/auth/presentation/views/signup_view.dart';
 import 'package:chatbot/features/home/presentation/views/home_view.dart';
 import 'package:chatbot/features/splash/presentation/views/splash_view.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 abstract class AppRouter {
@@ -23,11 +28,19 @@ abstract class AppRouter {
       ),
       GoRoute(
         path: kSignInView,
-        builder: (context, state) => const SignInView(),
+        builder: (context, state) => BlocProvider(
+          create: (context) => SignInCubit(getIt.get<AuthRepo>()),
+          child: const SignInView(),
+        ),
       ),
       GoRoute(
         path: kSignUpView,
-        builder: (context, state) => const SignupView(),
+        builder: (context, state) => BlocProvider(
+          create: (context) => SignupCubit(
+            getIt.get<AuthRepo>(),
+          ),
+          child: const SignupView(),
+        ),
       ),
     ],
   );
