@@ -10,5 +10,14 @@
     "have_an_account": "Have a registred account?",
     "signup": "Sign up",
     "full_name": "Full name",
-    "sign_out": "Sign out"
+    "sign_out": "Sign out",
+    "internet_con": "No internet connection",
+    "an_error_occurred": "An error occurred",
+    "email_or_password": "Invalid email or password",
+    "email_already_exists": "Email already exists",
+    "password_must_be": "Password must be at least 6 characters",
+    "invalid_email": "Invalid email",
+    "invalid_password": "Invalid password",
+    "invalid_email_or_password": "Invalid email or password",
+    "weak_password": "Weak password"
 }

@@ -22,22 +22,38 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "an_error_occurred":
+            MessageLookupByLibrary.simpleMessage("An error occurred"),
         "create_account":
             MessageLookupByLibrary.simpleMessage("  Create account"),
         "dont_have_an_account":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "email_already_exists":
+            MessageLookupByLibrary.simpleMessage("Email already exists"),
+        "email_or_password":
+            MessageLookupByLibrary.simpleMessage("Invalid email or password"),
         "full_name": MessageLookupByLibrary.simpleMessage("Full name"),
         "have_an_account":
             MessageLookupByLibrary.simpleMessage("Have a registred account?"),
+        "internet_con":
+            MessageLookupByLibrary.simpleMessage("No internet connection"),
+        "invalid_email": MessageLookupByLibrary.simpleMessage("Invalid email"),
+        "invalid_email_or_password":
+            MessageLookupByLibrary.simpleMessage("Invalid email or password"),
+        "invalid_password":
+            MessageLookupByLibrary.simpleMessage("Invalid password"),
         "or": MessageLookupByLibrary.simpleMessage("or"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "password_must_be": MessageLookupByLibrary.simpleMessage(
+            "Password must be at least 6 characters"),
         "sign_in": MessageLookupByLibrary.simpleMessage("Sign in"),
         "sign_in_with_facebook":
             MessageLookupByLibrary.simpleMessage("Sign in with Facebook"),
         "sign_in_with_google":
             MessageLookupByLibrary.simpleMessage("Sign in with Google"),
         "sign_out": MessageLookupByLibrary.simpleMessage("Sign out"),
-        "signup": MessageLookupByLibrary.simpleMessage("Sign up")
+        "signup": MessageLookupByLibrary.simpleMessage("Sign up"),
+        "weak_password": MessageLookupByLibrary.simpleMessage("Weak password")
       };
 }

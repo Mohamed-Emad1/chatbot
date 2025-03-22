@@ -22,22 +22,39 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "an_error_occurred": MessageLookupByLibrary.simpleMessage("حدث خطأ"),
         "create_account":
             MessageLookupByLibrary.simpleMessage("  انشاء حساب  "),
         "dont_have_an_account":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "email_already_exists": MessageLookupByLibrary.simpleMessage(
+            "البريد الإلكتروني موجود بالفعل"),
+        "email_or_password": MessageLookupByLibrary.simpleMessage(
+            "البريد الإلكتروني أو كلمة المرور غير صحيحة"),
         "full_name": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
         "have_an_account":
             MessageLookupByLibrary.simpleMessage("لديك حساب مسجل بالفعل؟"),
+        "internet_con":
+            MessageLookupByLibrary.simpleMessage("لا يوجد اتصال بالانترنت"),
+        "invalid_email":
+            MessageLookupByLibrary.simpleMessage("البريد الإلكتروني غير صالح"),
+        "invalid_email_or_password": MessageLookupByLibrary.simpleMessage(
+            "البريد الإلكتروني أو كلمة المرور غير صالحة"),
+        "invalid_password":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور غير صالحة"),
         "or": MessageLookupByLibrary.simpleMessage("أو"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "password_must_be": MessageLookupByLibrary.simpleMessage(
+            "كلمة المرور يجب أن تكون على الأقل 6 حروف"),
         "sign_in": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "sign_in_with_facebook":
             MessageLookupByLibrary.simpleMessage("تسجيل دخول باستخدام فيسبوك"),
         "sign_in_with_google":
             MessageLookupByLibrary.simpleMessage("تسجيل دخول باستخدام جوجل"),
         "sign_out": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
-        "signup": MessageLookupByLibrary.simpleMessage("انشاء حساب")
+        "signup": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
+        "weak_password":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور ضعيفة")
       };
 }

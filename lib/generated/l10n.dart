@@ -169,6 +169,96 @@ class S {
       args: [],
     );
   }
+
+  /// `No internet connection`
+  String get internet_con {
+    return Intl.message(
+      'No internet connection',
+      name: 'internet_con',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An error occurred`
+  String get an_error_occurred {
+    return Intl.message(
+      'An error occurred',
+      name: 'an_error_occurred',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid email or password`
+  String get email_or_password {
+    return Intl.message(
+      'Invalid email or password',
+      name: 'email_or_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email already exists`
+  String get email_already_exists {
+    return Intl.message(
+      'Email already exists',
+      name: 'email_already_exists',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password must be at least 6 characters`
+  String get password_must_be {
+    return Intl.message(
+      'Password must be at least 6 characters',
+      name: 'password_must_be',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid email`
+  String get invalid_email {
+    return Intl.message(
+      'Invalid email',
+      name: 'invalid_email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid password`
+  String get invalid_password {
+    return Intl.message(
+      'Invalid password',
+      name: 'invalid_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid email or password`
+  String get invalid_email_or_password {
+    return Intl.message(
+      'Invalid email or password',
+      name: 'invalid_email_or_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Weak password`
+  String get weak_password {
+    return Intl.message(
+      'Weak password',
+      name: 'weak_password',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
