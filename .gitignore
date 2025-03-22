@@ -53,3 +53,4 @@ DerivedData
 .env.*
 secrets.*
 lib/core/secrets
+android/app/src/main/res/values/strings.xml
