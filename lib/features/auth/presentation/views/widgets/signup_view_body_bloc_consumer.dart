@@ -28,7 +28,10 @@ class SignUpViewBodyBlocConsumer extends StatelessWidget {
       builder: (context, state) {
         return CustomProgressHud(
           isLoading: state is SignupLoading,
-          child: const SignupViewBody(),
+          child: const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 24, vertical: 24),
+            child: SignupViewBody(),
+          ),
         );
       },
     );

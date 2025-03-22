@@ -10,6 +10,7 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       appBar: buildAppBar(
         text: "ChatBot",
+        centerTitle: false,
       ),
       body: const SafeArea(
         child: HomeViewBody(),

@@ -1,8 +1,11 @@
 import 'package:chatbot/features/auth/domain/entities/user_entity.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-class UserModel extends UserEntity {
-  UserModel({required super.userId, required super.email, required super.name});
+class UserModel{
+  final String userId;
+  final String email;
+  final String name;
+  UserModel({required this.userId, required this.email, required this.name});
 
   factory UserModel.fromFirebaseUser(User user) {
     return UserModel(
@@ -22,6 +25,8 @@ class UserModel extends UserEntity {
   factory UserModel.fromEntity(UserEntity user) {
     return UserModel(userId: user.userId, email: user.email, name: user.name);
   }
+
+  toEntity() => UserEntity(userId: userId, email: email, name: name);
   toMap() {
     return {
       'email': email,

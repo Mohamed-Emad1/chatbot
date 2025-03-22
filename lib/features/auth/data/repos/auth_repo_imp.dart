@@ -76,7 +76,7 @@ class AuthRepoImp extends AuthRepo {
     User? user;
     try {
       user = await firebaseAuthService.signInWithGoogle();
-      var userEntity = UserModel.fromFirebaseUser(user);
+      var userEntity = UserModel.fromFirebaseUser(user).toEntity();
       var isUserExist = await databaseService.isUserExist(
           path: BackendEndpoints.isUserExist, documentId: user.uid);
       if (isUserExist) {
@@ -98,7 +98,7 @@ class AuthRepoImp extends AuthRepo {
     User? user;
     try {
       user = await firebaseAuthService.signInWithFacebook();
-      var userEntity = UserModel.fromFirebaseUser(user);
+      var userEntity = UserModel.fromFirebaseUser(user).toEntity();
       var isUserExist = await databaseService.isUserExist(
           path: BackendEndpoints.isUserExist, documentId: user.uid);
       if (isUserExist) {
@@ -128,12 +128,34 @@ class AuthRepoImp extends AuthRepo {
     var userData = await databaseService.getData(
         path: BackendEndpoints.getUserData, documentId: userId);
 
-    return UserModel.fromJson(userData);
+    return UserModel.fromJson(userData).toEntity();
   }
 
   @override
   Future saveUserData({required UserEntity user}) async {
     final jsonData = jsonEncode(UserModel.fromEntity(user).toMap());
     await SharedPreferencesSingleton.setstring(kUserData, jsonData);
+  }
+  
+  @override
+  Future<Either<Failure, UserEntity>> signInWithApple() async{
+     User? user;
+    try {
+      user = await firebaseAuthService.signInWithApple();
+      var userEntity = UserModel.fromFirebaseUser(user).toEntity();
+      var isUserExist = await databaseService.isUserExist(
+          path: BackendEndpoints.isUserExist, documentId: user.uid);
+      if (isUserExist) {
+        await getUserData(userId: user.uid);
+      } else {
+        await addUserData(user: userEntity);
+      }
+      saveUserData(user: userEntity);
+      return right(userEntity);
+    } on CustomExceptions catch (e) {
+      deleteUser(user);
+      log("Exception is created in AuthRepoImp sign in with apple : ${e.toString()}");
+      return left(ServerFailure(e.toString()));
+    }
   }
 }

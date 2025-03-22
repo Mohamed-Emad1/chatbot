@@ -11,10 +11,7 @@ class SignupView extends StatelessWidget {
     return Scaffold(
       appBar: buildAppBar(text: S.of(context).signup),
       body: const SafeArea(
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 24, vertical: 24),
-          child: SignUpViewBodyBlocConsumer(),
-        ),
+        child: SignUpViewBodyBlocConsumer(),
       ),
     );
   }

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:chatbot/core/utils/app_images.dart';
 import 'package:chatbot/core/widgets/custom_button.dart';
 import 'package:chatbot/core/widgets/custom_text_form_field.dart';
@@ -98,6 +100,7 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                 ),
                 SocialLoginButton(
                   onPressed: () {
+                    log("sign in with facebook");
                     BlocProvider.of<SignInCubit>(context).signInWithFacebook();
                   },
                   text: S.of(context).sign_in_with_facebook,

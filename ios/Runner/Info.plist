@@ -50,5 +50,69 @@
     <string>en</string>
     <string>ar</string>
 </array>
+
+<key>GIDClientID</key>
+<!-- TODO Replace this value: -->
+<!-- Copied from GoogleService-Info.plist key CLIENT_ID -->
+<string>1144368098-6rvtltsaesuubj38tuv8fc2iarq7ke51.apps.googleusercontent.com</string>
+
+<key>CFBundleURLTypes</key>
+<array>
+	<dict>
+		<key>CFBundleTypeRole</key>
+		<string>Editor</string>
+		<key>CFBundleURLSchemes</key>
+		<array>
+			<!-- TODO Replace this value: -->
+			<!-- Copied from GoogleService-Info.plist key REVERSED_CLIENT_ID -->
+			<string>com.googleusercontent.apps.1144368098-6rvtltsaesuubj38tuv8fc2iarq7ke51</string>
+		</array>
+	</dict>
+</array>
+
+
+<key>CFBundleURLTypes</key>
+<array>
+  <dict>
+    <key>CFBundleURLSchemes</key>
+    <array>
+      <string>fb{your-app-id}</string>
+    </array>
+  </dict>
+</array>
+<key>FacebookAppID</key>
+<string>{your-app-id}</string>
+<key>FacebookClientToken</key>
+<string>CLIENT-TOKEN</string>
+<key>FacebookDisplayName</key>
+<string>{your-app-name}</string>
+<key>LSApplicationQueriesSchemes</key>
+<array>
+  <string>fbapi</string>
+  <string>fb-messenger-share-api</string>
+</array>
+
+
+<key>CFBundleURLTypes</key>
+<array>
+  <dict>
+    <key>CFBundleURLSchemes</key>
+    <array>
+      <string>fb621374397427229</string>
+    </array>
+  </dict>
+</array>
+<key>FacebookAppID</key>
+<string>621374397427229</string>
+<key>FacebookClientToken</key>
+<string>b9e192dd1c999aec0fc915622aa7c4c3</string>
+<key>FacebookDisplayName</key>
+<string>ChatBot</string>
+<key>LSApplicationQueriesSchemes</key>
+<array>
+  <string>fbapi</string>
+  <string>fb-messenger-share-api</string>
+</array>
+
 </dict>
 </plist>

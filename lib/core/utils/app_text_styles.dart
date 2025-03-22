@@ -54,7 +54,7 @@ class AppTextStyles {
   );
 
   static const regular13 = TextStyle(
-    fontSize: 16,
+    fontSize: 13,
     fontWeight: FontWeight.w400,
     fontFamily: fontFamily,
     color: Color(0xFF0C0D0D),

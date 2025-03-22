@@ -11,10 +11,7 @@ class SignInView extends StatelessWidget {
     return Scaffold(
       appBar: buildAppBar(text: S.of(context).sign_in),
       body: const SafeArea(
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 24, vertical: 24),
-          child: SignInViewBodyBlocConsumer(),
-        ),
+        child: SignInViewBodyBlocConsumer(),
       ),
     );
   }
