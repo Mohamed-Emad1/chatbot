@@ -1,1 +1,14 @@
-{}
+{
+    "sign_in": "Sign in",
+    "sign_in_with_google": "Sign in with Google",
+    "sign_in_with_facebook": "Sign in with Facebook",
+    "or": "or",
+    "email": "Email",
+    "password": "Password",
+    "create_account": "  Create account",
+    "dont_have_an_account": "Don't have an account?",
+    "have_an_account": "Have a registred account?",
+    "signup": "Sign up",
+    "full_name": "Full name",
+    "sign_out": "Sign out"
+}

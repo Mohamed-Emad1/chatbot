@@ -1,5 +1,5 @@
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
-// This is a library that provides messages for a en locale. All the
+// This is a library that provides messages for a ar locale. All the
 // messages from the main program should be duplicated here with the same
 // function name.
 
@@ -18,26 +18,26 @@ final messages = new MessageLookup();
 typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 
 class MessageLookup extends MessageLookupByLibrary {
-  String get localeName => 'en';
+  String get localeName => 'ar';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "create_account":
-            MessageLookupByLibrary.simpleMessage("  Create account"),
+            MessageLookupByLibrary.simpleMessage("  انشاء حساب  "),
         "dont_have_an_account":
-            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
-        "email": MessageLookupByLibrary.simpleMessage("Email"),
-        "full_name": MessageLookupByLibrary.simpleMessage("Full name"),
+            MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
+        "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "full_name": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
         "have_an_account":
-            MessageLookupByLibrary.simpleMessage("Have a registred account?"),
-        "or": MessageLookupByLibrary.simpleMessage("or"),
-        "password": MessageLookupByLibrary.simpleMessage("Password"),
-        "sign_in": MessageLookupByLibrary.simpleMessage("Sign in"),
+            MessageLookupByLibrary.simpleMessage("لديك حساب مسجل بالفعل؟"),
+        "or": MessageLookupByLibrary.simpleMessage("أو"),
+        "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "sign_in": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "sign_in_with_facebook":
-            MessageLookupByLibrary.simpleMessage("Sign in with Facebook"),
+            MessageLookupByLibrary.simpleMessage("تسجيل دخول باستخدام فيسبوك"),
         "sign_in_with_google":
-            MessageLookupByLibrary.simpleMessage("Sign in with Google"),
-        "sign_out": MessageLookupByLibrary.simpleMessage("Sign out"),
-        "signup": MessageLookupByLibrary.simpleMessage("Sign up")
+            MessageLookupByLibrary.simpleMessage("تسجيل دخول باستخدام جوجل"),
+        "sign_out": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
+        "signup": MessageLookupByLibrary.simpleMessage("انشاء حساب")
       };
 }
