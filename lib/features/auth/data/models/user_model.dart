@@ -1,7 +1,7 @@
 import 'package:chatbot/features/auth/domain/entities/user_entity.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-class UserModel{
+class UserModel {
   final String userId;
   final String email;
   final String name;

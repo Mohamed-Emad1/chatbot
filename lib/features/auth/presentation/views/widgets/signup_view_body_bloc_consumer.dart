@@ -18,9 +18,9 @@ class SignUpViewBodyBlocConsumer extends StatelessWidget {
     return BlocConsumer<SignupCubit, SignupState>(
       listener: (context, state) {
         if (state is SignupSuccess) {
-          buildSucessSnackBar(context, S.of(context).sign_up_successfully);
+          buildSuccessSnackBar(context, S.of(context).sign_up_successfully);
           GoRouter.of(context).pop();
-          buildSucessSnackBar(context, S.of(context).sign_in_after_sign_up);
+          buildSuccessSnackBar(context, S.of(context).sign_in_after_sign_up);
         } else if (state is SignupFailure) {
           buildErrorBar(context, state.errMessage);
         }

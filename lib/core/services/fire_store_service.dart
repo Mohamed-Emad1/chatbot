@@ -1,7 +1,6 @@
 import 'package:chatbot/core/services/database_service.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-
 class FireStoreService implements DatabaseService {
   FirebaseFirestore firestore = FirebaseFirestore.instance;
   @override

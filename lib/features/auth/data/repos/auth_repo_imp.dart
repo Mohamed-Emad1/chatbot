@@ -136,10 +136,10 @@ class AuthRepoImp extends AuthRepo {
     final jsonData = jsonEncode(UserModel.fromEntity(user).toMap());
     await SharedPreferencesSingleton.setstring(kUserData, jsonData);
   }
-  
+
   @override
-  Future<Either<Failure, UserEntity>> signInWithApple() async{
-     User? user;
+  Future<Either<Failure, UserEntity>> signInWithApple() async {
+    User? user;
     try {
       user = await firebaseAuthService.signInWithApple();
       var userEntity = UserModel.fromFirebaseUser(user).toEntity();

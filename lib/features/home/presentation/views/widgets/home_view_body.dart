@@ -1,8 +1,16 @@
+import 'dart:math';
+
+import 'package:chatbot/core/helper/build_success_snackbar.dart';
+import 'package:chatbot/core/routing/app_router.dart';
 import 'package:chatbot/core/secrets/secrets.dart';
+import 'package:chatbot/core/utils/constant.dart';
+import 'package:chatbot/features/home/data/model/tree_model/tree_model.dart';
 import 'package:chatbot/features/home/domain/entities/message_entity.dart';
+import 'package:chatbot/features/home/presentation/views/widgets/custom_map_button.dart';
 import 'package:chatbot/features/home/presentation/views/widgets/custom_text_form.dart';
 import 'package:chatbot/features/home/presentation/views/widgets/messages_list_view.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 
 class HomeViewBody extends StatefulWidget {
@@ -20,23 +28,44 @@ class _HomeViewBodyState extends State<HomeViewBody> {
 
   final List<Message> messages = [];
 
-  void sendmessgae() async {
+  bool isReady = false;
+
+  void sendmessage() async {
     final message = _textController.text;
     _textController.clear();
+
+    if (message.trim().isEmpty) return;
 
     setState(() {
       messages
           .add(Message(isUser: true, message: message, date: DateTime.now()));
     });
 
-    final content = [Content.text(message)];
+    String prompt = message;
+    if (isReady) {
+      prompt = '$kPromptData\n$prompt';
+    }
 
+    final content = [Content.text(prompt)];
     final response = await model.generateContent(content);
 
-    setState(() {
-      messages.add(Message(
-          isUser: false, message: response.text!, date: DateTime.now()));
-    });
+    if (isReady) {
+      TreeModel list  = TreeModel.fromJson(response.text!);
+      GoRouter.of(context).push(
+        AppRouter.kResultMapView,
+        extra: {
+          "response": list,
+        },
+      );
+    } else {
+      setState(() {
+        messages.add(Message(
+          isUser: false,
+          message: response.text ?? "No response",
+          date: DateTime.now(),
+        ));
+      });
+    }
   }
 
   @override
@@ -51,10 +80,22 @@ class _HomeViewBodyState extends State<HomeViewBody> {
           Expanded(
             child: MessagesListView(messages: messages),
           ),
+          CustomMapButton(
+            onPressed: () {
+              setState(() {
+                isReady = !isReady;
+                if (isReady) {
+                  buildSuccessSnackBar(context, "Ready to generate map",
+                      duration: const Duration(milliseconds: 500));
+                }
+              });
+            },
+            isReady: isReady,
+          ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: CustomTextForm(
-                textController: _textController, sendMessgae: sendmessgae),
+                textController: _textController, sendMessage: sendmessage),
           ),
         ],
       ),

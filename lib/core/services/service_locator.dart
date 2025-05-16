@@ -1,4 +1,3 @@
-
 import 'package:chatbot/core/services/database_service.dart';
 import 'package:chatbot/core/services/fire_store_service.dart';
 import 'package:chatbot/core/services/firebase_auth_service.dart';
@@ -15,5 +14,4 @@ void setupServiceLocator() {
     firebaseAuthService: getIt<FirebaseAuthService>(),
     databaseService: getIt<DatabaseService>(),
   ));
-
 }

@@ -64,7 +64,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1144368098',
     projectId: 'chat-app-f7807',
     storageBucket: 'chat-app-f7807.firebasestorage.app',
-    iosClientId: '1144368098-6rvtltsaesuubj38tuv8fc2iarq7ke51.apps.googleusercontent.com',
+    iosClientId:
+        '1144368098-6rvtltsaesuubj38tuv8fc2iarq7ke51.apps.googleusercontent.com',
     iosBundleId: 'com.example.chatbot',
   );
 
@@ -74,7 +75,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1144368098',
     projectId: 'chat-app-f7807',
     storageBucket: 'chat-app-f7807.firebasestorage.app',
-    iosClientId: '1144368098-6rvtltsaesuubj38tuv8fc2iarq7ke51.apps.googleusercontent.com',
+    iosClientId:
+        '1144368098-6rvtltsaesuubj38tuv8fc2iarq7ke51.apps.googleusercontent.com',
     iosBundleId: 'com.example.chatbot',
   );
 

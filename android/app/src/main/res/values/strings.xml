@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">ChatBot</string>
-    <string name="facebook_app_id">621374397427229</string> 
-    <string name="fb_login_protocol_scheme">fb1234</string>
-    <string name="facebook_client_token">06ad987a236fda02c7bf5f56bd26347e</string> 
-</resources>

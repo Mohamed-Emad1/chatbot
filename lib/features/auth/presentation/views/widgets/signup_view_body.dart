@@ -33,7 +33,8 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                   onSaved: (value) {
                     fullName = value!;
                   },
-                  hintText: S.of(context).full_name,),
+                  hintText: S.of(context).full_name,
+                ),
                 const SizedBox(
                   height: 16,
                 ),
@@ -41,7 +42,8 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                   onSaved: (value) {
                     email = value!;
                   },
-                  hintText: S.of(context).email,),
+                  hintText: S.of(context).email,
+                ),
                 const SizedBox(
                   height: 16,
                 ),
@@ -49,7 +51,8 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                   onSaved: (value) {
                     password = value!;
                   },
-                  hintText: S.of(context).password,),
+                  hintText: S.of(context).password,
+                ),
                 const SizedBox(
                   height: 32,
                 ),

@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 
 class CustomTextForm extends StatelessWidget {
   const CustomTextForm(
-      {super.key, required this.textController, required this.sendMessgae});
+      {super.key, required this.textController, required this.sendMessage});
 
   final TextEditingController textController;
-  final void Function()? sendMessgae;
+  final void Function()? sendMessage;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class CustomTextForm extends StatelessWidget {
           ),
         ),
         IconButton(
-          onPressed: sendMessgae,
+          onPressed: sendMessage,
           icon: const Icon(
             Icons.send,
             color: AppColors.lightWhite,

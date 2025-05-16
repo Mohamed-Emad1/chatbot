@@ -19,7 +19,7 @@ class SignInViewBodyBlocConsumer extends StatelessWidget {
     return BlocConsumer<SignInCubit, SignInState>(
       listener: (context, state) {
         if (state is SignInSuccess) {
-          buildSucessSnackBar(context, S.of(context).sign_in_successfully);
+          buildSuccessSnackBar(context, S.of(context).sign_in_successfully);
           GoRouter.of(context).pushReplacement(AppRouter.kHomeView);
         } else if (state is SignInFailure) {
           buildErrorBar(context, state.errMessage);

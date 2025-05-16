@@ -5,6 +5,7 @@ import 'package:chatbot/features/auth/presentation/manager/signup_cubit/cubit/si
 import 'package:chatbot/features/auth/presentation/views/sign_in_view.dart';
 import 'package:chatbot/features/auth/presentation/views/signup_view.dart';
 import 'package:chatbot/features/home/presentation/views/home_view.dart';
+import 'package:chatbot/features/home/presentation/views/result_map_view.dart';
 import 'package:chatbot/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -14,6 +15,7 @@ abstract class AppRouter {
   static const kSplashView = '/splashView';
   static const kSignInView = '/signInView';
   static const kSignUpView = '/signUpView';
+  static const kResultMapView = '/resultMapView';
 
   static final router = GoRouter(
     initialLocation: kSplashView, // default start
@@ -41,6 +43,13 @@ abstract class AppRouter {
           ),
           child: const SignupView(),
         ),
+      ),
+      GoRoute(
+        path: kResultMapView,
+        builder: (context, state) => const ResultMapView(
+          
+        ),
+        
       ),
     ],
   );
