@@ -1,6 +1,8 @@
-import 'dart:math';
+import 'dart:convert';
+import 'dart:developer';
 
 import 'package:chatbot/core/helper/build_success_snackbar.dart';
+import 'package:chatbot/core/helper/strip_string.dart';
 import 'package:chatbot/core/routing/app_router.dart';
 import 'package:chatbot/core/secrets/secrets.dart';
 import 'package:chatbot/core/utils/constant.dart';
@@ -50,12 +52,18 @@ class _HomeViewBodyState extends State<HomeViewBody> {
     final response = await model.generateContent(content);
 
     if (isReady) {
-      TreeModel list  = TreeModel.fromJson(response.text!);
+      // log()
+      // log(response.text.toString());
+      final raw = cleanJsonArray(response.text ?? '');
+      log("raw");
+      final dynamic decoded = jsonDecode(raw);
+      final mapJson = <String, dynamic>{'data': decoded};
+      log(raw);
+      final TreeModel tree = TreeModel.fromJson(mapJson);
+      log(tree.toString());
       GoRouter.of(context).push(
         AppRouter.kResultMapView,
-        extra: {
-          "response": list,
-        },
+        extra: tree,
       );
     } else {
       setState(() {

@@ -4,6 +4,7 @@ import 'package:chatbot/features/auth/presentation/manager/signin_cubit/signin_c
 import 'package:chatbot/features/auth/presentation/manager/signup_cubit/cubit/signup_cubit.dart';
 import 'package:chatbot/features/auth/presentation/views/sign_in_view.dart';
 import 'package:chatbot/features/auth/presentation/views/signup_view.dart';
+import 'package:chatbot/features/home/data/model/tree_model/tree_model.dart';
 import 'package:chatbot/features/home/presentation/views/home_view.dart';
 import 'package:chatbot/features/home/presentation/views/result_map_view.dart';
 import 'package:chatbot/features/splash/presentation/views/splash_view.dart';
@@ -44,12 +45,13 @@ abstract class AppRouter {
           child: const SignupView(),
         ),
       ),
-      GoRoute(
+GoRoute(
         path: kResultMapView,
-        builder: (context, state) => const ResultMapView(
-          
-        ),
-        
+        builder: (context, state) {
+          // pull it out of state.extra:
+          final TreeModel tree = state.extra as TreeModel;
+          return ResultMapView(map: tree);
+        },
       ),
     ],
   );
